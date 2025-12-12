@@ -3,3 +3,50 @@
 @tailwind utilities;
 
 body { @apply bg-gray-50; }
+
+/* Admin home hero background */
+.admin-home-hero {
+	position: relative;
+	background-image: url('./assets/foodhb3.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: calc(100vh - 64px); /* adjust if admin navbar height differs */
+	display: flex;
+	flex-direction: column;
+}
+
+.admin-home-hero::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(0,0,0,0.18);
+	z-index: 0;
+}
+
+.admin-home-hero > * {
+	position: relative;
+	z-index: 1;
+}
+
+/* Make white panels inside the admin hero translucent with blur (glass effect) */
+.admin-home-hero .bg-white {
+	background-color: rgba(255, 255, 255, 0.22) !important;
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+	border: 1px solid rgba(255,255,255,0.12);
+	box-shadow: 0 6px 18px rgba(2,6,23,0.2);
+}
+
+/* Slightly stronger glass for prominent cards */
+.admin-home-hero .glass-strong {
+	background-color: rgba(255,255,255,0.30) !important;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid rgba(255,255,255,0.14);
+}
+
+/* Ensure text remains readable */
+.admin-home-hero .text-gray-500 {
+	color: rgba(31,41,55,0.9) !important;
+}
