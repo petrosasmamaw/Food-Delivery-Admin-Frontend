@@ -31,7 +31,7 @@ export default function Home() {
 
   return (
     <div className="admin-home-hero space-y-6 p-6">
-      <h1 className="text-3xl font-bold">Dashboard</h1>
+      <h1 className="text-3xl font-bold">Dashboard Admin</h1>
 
       <div className="grid grid-cols-3 gap-4">
         <StatsCard title="Users" value={userCount} />
